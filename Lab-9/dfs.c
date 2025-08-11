@@ -1,14 +1,14 @@
 #include <stdio.h>
 
-#define N 8
+#define V 8
 
-int visited[N];
+int visited[V];
 
-void dfs(int graph[N][N], int start) {
+void dfs(int graph[V][V], int start) {
     printf("%d ", start);
     visited[start] = 1;
 
-    for (int i = 0; i < N; i++) {
+    for (int i = 0; i < V; i++) {
         if (graph[start][i] == 1 && !visited[i]) {
             dfs(graph, i);
         }
@@ -16,7 +16,7 @@ void dfs(int graph[N][N], int start) {
 }
 
 int main() {
-    int graph[N][N] = {
+    int graph[V][V] = {
         {0,1,0,0,0,0,0,1},
         {1,0,1,1,0,0,0,0},
         {0,1,0,0,1,0,0,0},
@@ -27,7 +27,7 @@ int main() {
         {1,0,0,0,0,0,1,0}
     };
 
-    for (int i = 0; i < N; i++) visited[i] = 0;
+    for (int i = 0; i < V; i++) visited[i] = 0;
 
     printf("DFS Traversal: ");
     dfs(graph, 0);

@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "array": "c",
+        "random": "c",
+        "ratio": "c",
+        "utility": "c"
+    }
+}
